@@ -1,15 +1,13 @@
 <?php
-
-function teste($name)
+ 
+class User 
 {
-    return 'Olá, meu nome é ' . $name;
+    public function teste ($name, $age)
+    {
+        return 'Olá meu nome é ' . $name . ' E minha idade é ' . $age ;
+    }
 }
 
-function teste2($callback)
-{
-    if(is_callable($callback))
-    return $callback('Renan');
-}
+$user = new User;
 
-$user = 'teste';
-echo teste2('teste');
+echo call_user_func([$user,'teste'], 'Renan', 23);
