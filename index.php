@@ -2,9 +2,6 @@
 
 $names =['Renan', 'Joao', 'Maria'];
 
-for($i = 0; $i < count($names); $i++) {
-    if($i === 1){
-        continue;
-    }
-    echo $names[$i];
+foreach ($names as $key => $name) {
+ echo $key . '=>' . $name;   
 }
