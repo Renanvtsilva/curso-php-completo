@@ -1,7 +1,12 @@
 <?php
  
-function teste($name,$age){
-    return 'Ola meu nome é ' . $name . ' e minha idade é ' . $age;
+$user = function ($name){
+    return 'teste ' . $name;
+};
+
+function teste($callback)
+{
+    return call_user_func_array($callback,['Renan']);
 }
 
-echo call_user_func_array('teste', ['Renan', '24']);
+echo teste($user);
